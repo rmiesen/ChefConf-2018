@@ -1,0 +1,9 @@
+[submodule "Day1/lab"]
+	path = Day1/lab
+	url = git@github.com:rmiesen/chefconf2018-windows_automation.git
+[submodule "Day1/chefconf2018"]
+	path = Day1/chefconf2018
+	url = https://github.com/smurawski/chefconf2018
+[submodule "Day1/windows-baseline"]
+	path = Day1/windows-baseline
+	url = https://github.com/dev-sec/windows-baseline
