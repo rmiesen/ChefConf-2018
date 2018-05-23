@@ -95,10 +95,10 @@
 
 
 #### New features:
- **Seth Thomas:** Senior Community Engineer.
+**Seth Thomas:** Senior Community Engineer.
 
  * Ad-hoc tasks:
-   + Ad-hoc execution of resoruces, recipes, and ***FILL IN***.
+   + Ad-hoc execution of resoruces and recipes.
    * Called "chf-run".
    + Run ad-hoc resources: `chef -run rhel-01 package ntp action=install`
      - rhel-01 is a node that already exists, but doesn't have to be part of a chef server.
@@ -116,6 +116,24 @@
  * The key to shifting left.
  * Application as the unit of deployment is a _game changer_.
 
+## Do Change
+**Jeremy Winter:** Partner Director of Program Management, Microsoft.
+
+### Habitat in Azure
+ * Azure: Productive + Hybrid + Intelligent + Trusted.
+   + Hybrid: Support for diverse cloud, legacy environments.
+ * Azure Kubernetes Service (AKS)
+   + Fully managed Kubernetes orchestration service.
+   + Auto patching, auto scaling, auto updates.
+   + Use  the full Kubernetes ecosystem.
+ * Habitat walkthrough:
+   + Start with either `hab init` or a Visual Studio plugin to scaffold out a Habitat configuration file (called a "plan").
+     - See <https://www.habitat.sh/docs/glossary/#glossary-scaffolding> and <https://www.habitat.sh/tutorials/sample-app/mac/> for examples, more details.
+   + Build the Habitat package and upload it to the on-premises enterprise server or public FOSS (not for Enterprise, obviously), then deploy it to Azure as a container (or anything else really)
+ * Azure cloud shell: contains a lot of developer tools and the azure CLI (azcli). Now ships with InSpec.
+
+### Advice:
+> (About change) "Stagnation is more dangerous than change." (printed out on a color dot matrix printer in 2008).
 
 #### Questions:
  * For Habitat: what about running test suites and validation suites as part of Habitat? Is that possible?
