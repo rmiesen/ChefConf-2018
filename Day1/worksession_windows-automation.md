@@ -16,7 +16,7 @@
      - See <https://github.com/smurawski/chefconf2018>
 
 # DevSec Windows Baseline compliance
- * Part of Chef Automate
+ * Windows Baseline compliance profiles are provided as part of Chef Automate.
  
 ## Get your machine details
  * Open the kitchen file in your editor ( found in `<COOKBOOK_DIR>/.kitchen/default-windows-server-2016.yml`).
@@ -28,21 +28,21 @@
 ## Scan your machine w/ the Baseline InSpec profile
   * `inspec exec https://github.com/dev-sec/windows-baseline -t winrm://[username]@[host]`
     - Implication: This means we can put our DevSec stuff in a private GIT repo and dynamically pull that as part of a compliance run.
-  * Note: your definition of "secure" will vary and should vary: if you blindly apply every recommended security setting, you'll have a nearly unusable system.
+  * Note: your definition of "secure" will vary and should vary. If you blindly apply every recommended security setting, you'll have a nearly unusable system!
 
 
 # Chocolatey
  * Traditional tools
-   - Manual conf
-   - Golden images
-   - Endpoint management tools
-   - Doesn't integrate with Configuration Management systems like Chef
+   - Manual conf.
+   - Golden images (aka. Sacred Cows).
+   - Endpoint management tools.
+   - None of these integrate with Configuration Management systems like Chef.
  * Modernizing automation:
-   - Software management / package management systems account for 50% -- 90% of your automation
+   - Software management / package management systems account for 50% -- 90% of your automation.
    - Lots of variability in installing packages on Windows.
  * Chocolatey
    - Easy to manage software lifecycle
-   - Universal format for managing all aspects of Windows software (msi, scripts, zips, binaries, etc..
+   - Universal format for managing all aspects of Windows software (msi, scripts, zips, binaries, etc.
    - PowerShell module simplifies work.
    - Packages are independent building blocks
    - Integrates with configuration management systems.
@@ -75,7 +75,6 @@
    - There are others, but these two will do. :)
  * Creating Chocolatey Packages
    - Terminology: "Package" is nupkg file, "Software" is binaries or installers.
-   - **FINISH**
    - <https://chocolatey.org/docs/create-packages>
    - `choco new`
    - Package Builder (C4B) - "Generate software deployment packages in seconds".
@@ -169,10 +168,12 @@
 
 
 # Misc notes
- * Do _not_ use `chef-client` to push individual windows patches: that's what WUS (Windows Update Service) is for. Use the appropriate resource for WUS instead.
-   - Appropriate resources: **`***FILL IN***`**
+ * Do _not_ use `chef-client` to push individual windows patches: that's what WSUS (**W**indows **S**erver **U**pdate **S**ervice) is for. Use the appropriate resource for WSUS instead.
+   - Relevant supermarket cookbooks:
+     + <https://supermarket.chef.io/cookbooks/wsus-client>
+     + <https://supermarket.chef.io/cookbooks/wsus-server>
  * Testing
-   - As a rule, InSpec should come before chefspec, as chefspec doesn't test the state of the IUT.
+   - As a rule, InSpec should come before chefspec, as chefspec doesn't test the state of the IUT (**I**tem **U**nder **T**est).
    - Cases where chefspec is useful:
      1. When you are writing custom resources.
      2. When you have complex recipes.
