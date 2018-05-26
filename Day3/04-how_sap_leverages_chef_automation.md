@@ -7,7 +7,7 @@
 
 ## Portfolio
  * Creates applications for a diverse array of subject matters.
- * Deliver appplications.
+ * Deliver applications.
  * Manage applications.
  * Consult.
 
@@ -16,10 +16,10 @@
  * Use Chef Automate.
  * Use Terraform for infra management.
  * Rundeck to manage operations.
- * Goal is to autoamte the provisioning and configuration of systems.
- * Create 55 different templates over three years, deployable in cloud or on metal.
+ * Goal is to automate the provisioning and configuration of systems.
+ * Created 55 different templates over three years, deployable in cloud or on metal.
  * Created and maintained over 300 cookbooks.
- * Create and enforce configurating Management policy.
+ * Create and enforce configuration Management policy.
  * Can re-create services and servers from scratch.
  * Close DevOps collaboration with dev teams to improve CI/CD process and Velocity.
 
@@ -42,5 +42,5 @@
  * Monitor compliance requirements on an ongoing basis
    + Total servers in scope: 20k.
    + Total compliance profiles: 5
- * Fully automateed multi-cloud Chef compliance process
+ * Fully automated multi-cloud Chef compliance process
  

@@ -1,13 +1,14 @@
 # Keynotes
 ## Choir! Choir! Choir!
-Summary: Someone at Chef Software thought it would be a really neat idea to have an unannounced hour long group Karaoke session at 8:30 in the morning. It wasn't.
+### Summary:
+Someone at Chef Software thought it would be a really neat idea to have an unannounced hour long group Karaoke session at 8:30 in the morning. It wasn't.
 
 
 ## Serving up Containers using Chef
 **Arun Gupta:** Principal Open Source Technologist, Amazon Web Services.
 
  * Containers make it easy to build, deploy, and scale apps.
- * Amazon Container SErvices:
+ * Amazon Container Services:
    + Amazon ECS.
    + Amazon EKS (limited preview)
    + AWS Fargate (they just run your containers for you w/o you worrying about the Docker infrastructure)

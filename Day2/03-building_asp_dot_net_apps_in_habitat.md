@@ -4,12 +4,12 @@
 ## Scope of app
  * IIS.
  * SQL Server backend.
- * All software reqs installed automatically.
+ * All software requirements installed automatically.
  * Deployed to Containers.
 
 
 ## URLs of Interest:
- * <Https://www.habitat.sh/>
+ * <https://www.habitat.sh/>
    + Docs
    + Tutorials
    + Builder
@@ -17,8 +17,8 @@
    + <https://github.com/habitat-sh/habitat-aspnet-eff
  * Running Habitat as a service:
    + <https://github.com/habitat-sh/windows-service>
- * Sql Server pan:
-   + In core habitat plans (github)
+ * SQL Server plan:
+   + In core habitat plans (GitHub)
 
 
 ## Installing Habitat on Windows

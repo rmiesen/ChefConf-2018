@@ -6,7 +6,7 @@ Presenter: **JJ Asghar**, chef
 
 ## Why Chef and VMware together
  * Provisioning and conf.
- * Patch and drift mgmt.
+ * Patch and drift management.
  * Datacenter modernization.
  * Cloud infra migration
  * Compliance Auditing.
@@ -36,7 +36,7 @@ Presenter: **JJ Asghar**, chef
  * The VRA and VRO plugins have integration points from within VRA and VRO.
  * VRO is essentially a GUI version of knife.
 
-## Three Best Pracices
+## Three Best Practices
  * No chef-client in your VMware templates.
    + Use the VMware plugins instead to get chef-client on there
  * Using Terraform, vCenter, and Chef.
@@ -46,10 +46,10 @@ Presenter: **JJ Asghar**, chef
  * InSpec profiles and demos validating.
    + ESXi: hypervisor configuration.
    + NSX: network configuration.
- * 6.7 vCenter valiadation.
+ * 6.7 vCenter validation.
  * Reference implementations of common VMware deployments integrated with Chef and InSpec.
 
 
 
 ## TODO:
- * Look into vSphere cloning api changes in 6.7.
+ * Look into vSphere cloning API changes in 6.7.

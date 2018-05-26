@@ -9,7 +9,7 @@
    + However, it is possible to make only a few changes to a system and slowly shift a legacy system left.
 
 ## Example Application
-"Scalable Low-latancy Asynchronous Communication" (SLACK)
+"Scalable Low-latency Asynchronous Communication" (SLACK)
  * IRC
  * HTML5 / CSS3
  * Yarn
@@ -28,7 +28,7 @@
 ## Keys to successful migration
  * Bi-Directional Service Discovery.
  * Service discovery: 2 perspectives
-   + Insite the habitat cluster (new)
+   + Onsite the habitat cluster (new)
    + Outside the Habitat cluster
      - Can't take advantage of proxy service
      - **`***FINISH***`**
@@ -49,7 +49,7 @@
        * Inflexible with regard to change.
        * One way.
    + Method 2: Consul Integration
-     - Take traditional infrastructure and add it all to consol.
+     - Take traditional infrastructure and add it all to consul.
      - Deploy into habitat deployment a consul proxy, have it reach out to consul to get service discovery information.
    
    

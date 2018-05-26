@@ -1,8 +1,6 @@
 # Windows Automation with Chef Workshop
-**`***NOTE TO SELF: MERGE IN NOTES FROM VARIOUS EXAMPLES FOUND IN <https://github.com/smurawski/chefconf2018>. Also, add in "alternate credentials" examples***`**
-
-
-# Getting started
+**Note:** Additional notes from the author can be found at <https://github.com/smurawski/chefconf2018>.
+## Getting started
  * RDP information (for me):
    - Group 1: `cc2018.southcentralus.cloudapp.azure.com`
    - Port: `5000` + your assigned number
@@ -15,23 +13,23 @@
    2. Setup developer Workstation
      - See <https://github.com/smurawski/chefconf2018>
 
-# DevSec Windows Baseline compliance
+## DevSec Windows Baseline compliance
  * Windows Baseline compliance profiles are provided as part of Chef Automate.
  
-## Get your machine details
+### Get your machine details
  * Open the kitchen file in your editor ( found in `<COOKBOOK_DIR>/.kitchen/default-windows-server-2016.yml`).
  * Grab the username / password / address
 
-## View the DevSec Windows Baseline
+### View the DevSec Windows Baseline
  * <https://github.com/dev-sec/windows-baseline>
  
-## Scan your machine w/ the Baseline InSpec profile
+### Scan your machine w/ the Baseline InSpec profile
   * `inspec exec https://github.com/dev-sec/windows-baseline -t winrm://[username]@[host]`
     - Implication: This means we can put our DevSec stuff in a private GIT repo and dynamically pull that as part of a compliance run.
   * Note: your definition of "secure" will vary and should vary. If you blindly apply every recommended security setting, you'll have a nearly unusable system!
 
 
-# Chocolatey
+## Chocolatey
  * Traditional tools
    - Manual conf.
    - Golden images (aka. Sacred Cows).
@@ -42,7 +40,7 @@
    - Lots of variability in installing packages on Windows.
  * Chocolatey
    - Easy to manage software lifecycle
-   - Universal format for managing all aspects of Windows software (msi, scripts, zips, binaries, etc.
+   - Universal format for managing all aspects of Windows software (msi, scripts, zips, binaries, etc).
    - PowerShell module simplifies work.
    - Packages are independent building blocks
    - Integrates with configuration management systems.
@@ -103,7 +101,7 @@
          + Professional support.
  * Chocolatey Fest 2018: October 8th, one day, San Francisco.
    
-# Using DSC resource in Chef recipes
+## Using DSC resource in Chef recipes
  * DSC: **D**esired **S**tate **C**onfiguration
  * Starting with in-box resources
    + Just use the `dsc_resource`:
@@ -125,8 +123,8 @@
    + `windows_feature` will get faster as PowerShell advances.
    
 
-# Windows tips-and-tricks:
-## Domain Joining
+## Windows tips-and-tricks:
+### Domain Joining
  * When should we do it?
    + Machine provisioning (aka: `sysprep`)?
    + Runtime (aka: `chef-client`)?
@@ -136,7 +134,7 @@
  * However, domain joining may be going the way of the dodo in the cloud, as domains don't handle cases where nodes are pulled in / out of domain frequently.
    + In short, think about why you are needing to join the domain, consider whether there is a real business need for it.
 
-# Windows Updates
+## Windows Updates
  * Short answer: Don't manager individual updates
  * Manage the update client
    + Windows update / WSUS have databases designed to do this.
@@ -147,7 +145,7 @@
    + Decline patches.
    + Look for Trevor Hess's GitHub page. He has a demo for how to setup WSUS server.
 
-# Resources to know
+## Resources to know
  * `powershell_script`
  * `windows_package`
  * `dsc_resource`
@@ -155,7 +153,7 @@
  * `chocolatey_package`
  * `msu_package` (MSU == **M**icro**s**oft **U**pdate)
 
-# Test Images and Tooling
+## Test Images and Tooling
  * Packer.
  * WSUS Offline Tool: <http://download.wsusoffline.net>
    + A utility for creating a big "iso" to use to patch a fleet of Win2k8 systems, create base images.
@@ -167,7 +165,7 @@
  * VMware Templates.
 
 
-# Misc notes
+## Misc notes
  * Do _not_ use `chef-client` to push individual windows patches: that's what WSUS (**W**indows **S**erver **U**pdate **S**ervice) is for. Use the appropriate resource for WSUS instead.
    - Relevant supermarket cookbooks:
      + <https://supermarket.chef.io/cookbooks/wsus-client>
@@ -186,7 +184,7 @@
  * Look into the windows OHAI plugin. Profiles system, Windows features, stores it on Chef server.
 
 
-# Questions:
+## Questions:
  * Chocolatey:
    + I run into cases where using the `chocolatey` supermarket cookbook to install chocolatey where running the `chocolatey_package` resource fail in succeeding recipes. What is the proper way to install chocolatey if it's not installed the first time?
    + Why isn't Chocolatey installed as part of the `chef-client` installation?
