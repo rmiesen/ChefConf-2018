@@ -77,8 +77,10 @@
 
 ### Habitat
  * On-premises depot
-   + Could be _very useful_for replacing legacy build systems.
-   + Could even supercede and replace systems like Jenkins for CI/CD...without the baggage and grief that comes with it!
+   + Note taker's opinion:
+     - Could be _very useful_for replacing legacy build systems.
+     - Could even potentially supercede and replace systems like Jenkins for CI/CD...without the baggage and grief that comes with it!
+     - However, a POC needs to be done first.
  * Kubernetes operator.
  * Export to Azure and Helm
  * Open service broker.
@@ -133,8 +135,9 @@
  * Azure cloud shell: contains a lot of developer tools and the azure CLI (azcli). Now ships with InSpec.
 
 ### Advice:
-> (About change) "Stagnation is more dangerous than change." (printed out on a color dot matrix printer in 2008).
+> (About change) "Stagnation is more dangerous than change." (printed out on a color dot matrix printer by a departing Microsoft manager in 2008).
 
 #### Questions:
  * For Habitat: what about running test suites and validation suites as part of Habitat? Is that possible?
  * For ad-hoc automation: is it possible to automatically create new infrastructure ad-hoc too?
+   + Answer: not yet, but it is very likely that such ad-hoc infrastructure creation---called "orchestration"---will be added to a later version of Chef Automate.

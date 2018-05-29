@@ -72,7 +72,7 @@
    - Private Chocolatey server
    - There are others, but these two will do. :)
  * Creating Chocolatey Packages
-   - Terminology: "Package" is nupkg file, "Software" is binaries or installers.
+   - Terminology: "Package" is a nupkg file, "Software" is a binary or installer.
    - <https://chocolatey.org/docs/create-packages>
    - `choco new`
    - Package Builder (C4B) - "Generate software deployment packages in seconds".
